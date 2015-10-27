@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<div id="statsModule">
+			<script id="stats-template" type="text/template">
+				<span>Number of people:</span>
+				<span>{{people}}</span>
+			</script>
+
+	</div>
+	<div id="peopleModule">
+		<h1>People</h1>
+		<input placeholder="name" type="text">
+		<button id="addPerson">Add Person</button>
+		<ul id="people">
+			<script id="people-template" type="text/template">
+				{{#people}}
+				<li>
+					<span>{{.}}</span>
+					<i class="del">&#x2718;</i>
+				</li>
+				{{/people}}
+			</script>
+		</ul>
+	</div>
+
+	<div id="myList">
+		<h1>My List</h1>
+		<input placeholder="name" type="text">
+		<button id="addItem">Add Item</button>
+		<ul>
+			<script id="my-list-template" type="text/template">
+				{{#list}}
+				<li>
+					<span>{{.}}</span>
+					<i class="del">&#x2718;</i>
+				</li>
+				{{/list}}
+			</script>
+		</ul>
+	</div>
+	<script src="jquery2.1.4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+	<!-- <script src="objectliteral/people.module.js"></script>
+	<script src="objectliteral/mylist.module.js"></script> -->
+	<!-- <script src="revealingmodule/people.module.js"></script> -->
+	<script src="pubsub/pubsub.js"></script>
+	<script src="pubsub/stats.module.js"></script>
+	<script src="pubsub/people.module.js"></script>
+
+</body>
+</html>
